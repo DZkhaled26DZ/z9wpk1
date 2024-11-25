@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل عملات Binance SPOT</title>
+    <meta name="description" content="أداة تحليل عملات Binance SPOT - تحليل مباشر للعملات الرقمية">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>محلل عملات Binance</h1>
+        <div class="clock"></div>
+        <div class="controls">
+            <select id="timeframe">
+                <option value="1m">1 دقيقة</option>
+                <option value="3m">3 دقائق</option>
+                <option value="5m">5 دقائق</option>
+                <option value="15m">15 دقيقة</option>
+                <option value="30m">30 دقيقة</option>
+                <option value="1h" selected>1 ساعة</option>
+                <option value="2h">2 ساعة</option>
+                <option value="4h">4 ساعات</option>
+                <option value="6h">6 ساعات</option>
+                <option value="8h">8 ساعات</option>
+                <option value="12h">12 ساعة</option>
+                <option value="1d">1 يوم</option>
+                <option value="3d">3 أيام</option>
+                <option value="1w">1 أسبوع</option>
+                <option value="1M">1 شهر</option>
+            </select>
+            <button id="soundToggle" title="تفعيل/تعطيل الصوت">🔊</button>
+            <button id="startStop" title="بدء/إيقاف التحليل">▶️</button>
+            <button id="refresh" title="تحديث">🔄</button>
+            <button id="reset" title="إعادة الضبط">⚡</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="sort-controls">
+            <button data-sort="time">الوقت</button>
+            <button data-sort="wickLength">طول الذيل</button>
+            <button data-sort="price">السعر</button>
+        </div>
+        <div id="cryptoList" class="crypto-grid"></div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 خالد دراغة - للتواصل: gsmkhaledtiaret@gmail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
